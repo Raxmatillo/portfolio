@@ -1,0 +1,85 @@
+/* Team-logo */
+.team-name {
+    text-align: center;
+    margin-bottom: 0;
+}
+.team-device {
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 14px;
+}
+.team-name__main {
+    margin: 100px;
+    text-align: center;
+    font-size: 48px;
+    color: #2704FE;
+}
+.team-about {
+    text-align: center;
+    font-size: 32px;
+    color: #2704FE;
+}
+
+.team-logo__img {
+    border: 3px solid #2704FE;
+}
+
+
+/* Developers */
+.developers {
+    margin-top: 210px;
+    width: auto;
+    background-color: #2704FE;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly
+}
+.developer {
+    margin: 0px auto;
+    width: 60%;
+}
+.developer-backend__image {
+    border: 2px solid #4B8BBE;
+}
+.developer-backend__name {
+    color: #4B8BBE;
+    text-align: center;
+}
+
+.developer-fullstack__image {
+    border: 2px solid  #e70808;
+}
+.developer-fullstack__name {
+    color:  #e70808;
+    text-align: center;
+}
+
+.developer-frontend__image {
+    border: 2px solid #FFD43B;;
+}
+.developer-frontend__name {
+    color: #FFD43B;
+    text-align: center;
+}
+
+.developer-android__image {
+    border: 2px solid  #80FF00;
+}
+
+.developer-android__name {
+    color:  #80FF00;
+    text-align: center;
+}
+/* Our projects */
+
+.our-projects{
+    margin-top: 20px;
+}
+.triangle-down {
+    margin: 20px auto;
+	width: 0;
+	height: 0;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-top: 50px solid #2704FE;
+}
