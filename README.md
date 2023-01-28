@@ -1,1 +1,2 @@
 # portfolio
+Mening shaxsiy portfolioyim
