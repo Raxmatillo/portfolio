@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rakhmatullo Shermatov progessional portfolio web site">
+    <title>Rakhmatullo Shermatov</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__container container">
+            <img class="site-header__img" src="static/img/my_photo.jpg" width="150" height="150"
+                alt="Raxmatillo Shermatov">
+
+            <div class="site-header__right">
+                <div class="site-header__info">
+                    <h1 class="site-header__title">Rakhmatullo Shermatov</h1>
+                    <p class="site-header__subtitle">I am Rakhmatullo Shermatov, I was born in 2001. I have been working
+                        with the
+                        Python programming language since 2021. I use Python's Django framework to build the backend of
+                        the sites. I
+                        use the Aiogram library to create bots in Telegram. I have basic knowledge of Data Analysis. I'm
+                        parsing sites, beautifulsoup and request
+                        libraries help me.</p>
+
+                    <!-- <div>
+            <a href="">Github</a>
+            <a href="">Github</a>
+            <a href="">Github</a>
+          </div> -->
+                </div>
+
+                <div class="site-header__extra_info">
+                    <address class="site-header__address">
+                        <p>Ferghana, Uzbekistan</p>
+                        <a class="site-header__link" href="mailto:milodcomposer@gmail.com">milodcomposer@gmail.com</a>
+                        <a class="site-header__link" href="tel:+998941010133">(94) 101 01 33</a>
+                        <div class="site-header__links">
+                            <a href="https://github.com/Raxmatillo">Github</a>
+                            <a href="http://t.me/havaskor_dasturchi">Telegram</a>
+                            <a href="https://linkedin.com/in/raxmatullo-shermatov">LinkedIn</a>
+                        </div>
+                    </address>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Education section -->
+    <section class="container">
+        <h1>Education</h1>
+        <blockquote>
+            <h3 style="margin-bottom: 0;">Fargona Davlat Universiteti</h3>
+            <p style="margin-bottom: 0; margin-top: 3px;">Bachelor's degree, Mathematics and Computer Science</p>
+            <time datetime="09:2020">Sep 2020 - Present</time>
+        </blockquote>
+    </section>
+    <!-- /Education section -->
+
+    <!-- SKILLS -->
+    <section class="skills-section container">
+        <h1>Skills</h1>
+        <blockquote>
+            <ul>
+                <li>HTML</li>
+                <li>Bootstrap</li>
+                <li>Python</li>
+                <ul>
+                    <li>Django</li>
+                    <li>Aiogram</li>
+                    <li>NumPy</li>
+                    <li>Pandas</li>
+                </ul>
+                <li>PostgreSQL</li>
+                <li>sqlite</li>
+                <li>Web Scraping</li>
+            </ul>
+        </blockquote>
+    </section>
+    <!-- /SKILLS -->
+
+    <!-- PROJECTS -->
+    <section class="container">
+        <h1>Projects</h1>
+        <blockquote>
+            {% if count == 0 %}
+            <h1 style="color: #0e0e0e;">Not Found !</h1>
+            {% else %}
+            <div class="cards">
+                {% for project in projects %}
+                <div class="card">
+                    <div class="projects-card__img">
+                        <img src="{{ project.photo.url }}" width="300" height="100" alt="{{ project.title }}" srcset=""
+                            class="project-card__img">
+                    </div>
+                    <h3 style="margin-top: 3px; margin-bottom: 0;">{{ project.title }}</h3>
+                    <p style="margin-top: 2px;">{{ project.description }}</p>
+                    <p style="display: flex;justify-content: space-between;">
+                        <a href="{{ project.url }}" target="_blank">Link to the project</a>
+                        <time datetime="09:2020">{{ project.created_at|date:'H:i / Y-m-d'}}</time>
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </blockquote>
+    </section>
+    <!-- /PROJECTS -->
+
+    <!-- FOOTER -->
+    <section class="container">
+        <blockquote>
+            <p style="text-align: center;">Rakhmatullo Shermatov || 2023 years</p>
+        </blockquote>
+    </section>
+    <!-- /FOOTER -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
